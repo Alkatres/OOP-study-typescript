@@ -3,9 +3,9 @@
 
 import Consumer from "./Consumer";
 
-export default interface Iterator {
-  forEachRemaining(action?: Consumer): void;
+export default interface Iterator<E> {
+  forEachRemaining(action?: Consumer<E>): void;
   hasNext(): boolean;
-  // next(): E;
+  next(): E;
   remove(): void;
 }
